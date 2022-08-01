@@ -1,0 +1,48 @@
+body{
+    background-color: #000;
+}
+
+
+.Plan{
+    height: 100px;
+    width: 450px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 12px ;
+    border: solid 2px #ffffff;
+    padding: 0px ;
+    display: flex;
+    align-content: center;
+}
+
+.logo img{
+    height: 93px;
+    margin: 3px 5px;
+
+}
+
+.mid{
+    width: 340px;
+    height: 100%;
+    background-color: aquamarine;
+
+}
+
+.details{
+    background-color: blueviolet;
+    height: 50px;
+    width: 100%;
+}
+
+.circels{
+    background-color: rgb(194, 191, 28);
+    height: 50px;
+    width: 100%;
+}
+
+.getbtn{
+    height: 60px;
+    width: 90px;
+    background-color: burlywood;
+    position: absolute;
+    z-index: 2;
+}
