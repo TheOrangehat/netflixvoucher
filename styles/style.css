@@ -57,15 +57,50 @@ nav {
 
 nav li {
   margin: auto 15px;
-  font-size: 20px;
+  font-size: 1rem;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 425px) {
+  nav li {
+    list-style: none;
+  }
+  nav li span {
+    display: none;
+  }
+  nav li ion-icon {
+    font-size: 18px;
+  }
 }
 
 nav .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 425px) {
+  nav .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .right li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    list-style: none;
+  }
+  nav .right li span {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 900px) {
+  nav .right {
+    background-color: #00ff4c;
+  }
 }
 
 .TopContainer {
@@ -85,8 +120,34 @@ nav .right {
   background-image: linear-gradient(to right, #000000, #00000000);
 }
 
+@media screen and (max-width: 425px) {
+  .TopContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .TopContainer .text {
+    width: 100%;
+  }
+  .TopContainer .text h2 {
+    color: #00ff4c;
+  }
+}
+
 .TopContainer .text {
   width: 40%;
+}
+
+@media screen and (max-width: 425px) {
+  .TopContainer .text {
+    width: 100%;
+  }
+  .TopContainer .text h2 {
+    font-size: 32px !important;
+    margin: 5px auto;
+  }
 }
 
 .TopContainer .text h2 {
@@ -103,6 +164,19 @@ nav .right {
 
 .TopContainer .plansdiv {
   width: 50%;
+}
+
+@media screen and (max-width: 425px) {
+  .TopContainer .plansdiv {
+    width: 100vw;
+    margin: 10px;
+  }
+  .TopContainer .plansdiv .plan {
+    width: 95% !important;
+  }
+  .TopContainer .plansdiv .plan .planTxt {
+    width: 155px !important;
+  }
 }
 
 .TopContainer .plansdiv .plan {
@@ -217,6 +291,13 @@ nav .right {
   padding-left: 10px;
 }
 
+@media screen and (max-width: 425px) {
+  .Howitworks .planh3 {
+    padding-left: 15px !important;
+    margin: 10px 10px 10px 10px;
+  }
+}
+
 .Howitworks .box {
   width: 80%;
   height: 300px;
@@ -247,6 +328,19 @@ nav .right {
           transform: scale(1.01);
 }
 
+@media screen and (max-width: 425px) {
+  .Howitworks .box {
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 350px;
+  }
+}
+
 .Howitworks .box .boximg {
   width: 40%;
   height: 100%;
@@ -255,10 +349,28 @@ nav .right {
   background-size: cover;
 }
 
+@media screen and (max-width: 425px) {
+  .Howitworks .box .boximg {
+    display: none;
+  }
+}
+
 .Howitworks .box .information {
   border-radius: 18px;
   color: #ffffff;
   margin: 2px 10px;
+}
+
+@media screen and (max-width: 425px) {
+  .Howitworks .box .information {
+    padding: 10px 2px;
+  }
+  .Howitworks .box .information h2 {
+    font-size: 28px !important;
+  }
+  .Howitworks .box .information li {
+    font-size: 1.2rem !important;
+  }
 }
 
 .Howitworks .box .information h2 {
@@ -288,6 +400,19 @@ nav .right {
           justify-content: center;
 }
 
+@media screen and (max-width: 425px) {
+  .Howitworks .Planscom {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .Howitworks .Planscom .plan {
   border-radius: 18px;
   border: solid 1px gray;
@@ -311,6 +436,13 @@ nav .right {
           box-shadow: 5px 8px 15px 0px #00000054;
 }
 
+@media screen and (max-width: 425px) {
+  .Howitworks .Planscom .plan {
+    width: 280px !important;
+    margin: 10px auto;
+  }
+}
+
 .Howitworks .Planscom .plan .topimg {
   height: 150px;
 }
@@ -321,6 +453,12 @@ nav .right {
   width: 298px;
   -o-object-fit: fill;
   object-fit: cover;
+}
+
+@media screen and (max-width: 425px) {
+  .Howitworks .Planscom .plan .topimg img {
+    width: 278px !important;
+  }
 }
 
 .Howitworks .Planscom .plan .planD {
@@ -405,8 +543,24 @@ nav .right {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 425px) {
+  .getmail .left {
+    display: none;
+  }
+}
+
 .getmail .right {
   width: 60%;
+}
+
+@media screen and (max-width: 425px) {
+  .getmail .right {
+    width: 100% !important;
+  }
+  .getmail .right h3 {
+    font-size: 24px !important;
+    margin: 5px auto;
+  }
 }
 
 .getmail .right h3 {

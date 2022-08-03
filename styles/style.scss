@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -14,6 +14,8 @@ $Oxygen: "Oxygen", sans-serif;
 $BalooDa2: "Baloo Da 2", cursive;
 $backrground-color: #000000;
 $base-color: #ff0000;
+$phone_wdth : 425px;
+
 
 @mixin Noselect {
   -webkit-user-select: none; /* Safari */
@@ -27,13 +29,13 @@ body {
   // -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: thin; /* Firefox */
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     width: 10px;
-    background:rgba(0, 0, 0, 0.432);
+    background: rgba(0, 0, 0, 0.432);
   }
-  &::-webkit-scrollbar-thumb{
+  &::-webkit-scrollbar-thumb {
     width: 10px;
-    background:rgba(255, 255, 255, 0.432);
+    background: rgba(255, 255, 255, 0.432);
     border-radius: 12px;
   }
 }
@@ -58,17 +60,42 @@ nav {
   justify-content: space-between;
 
   li {
-    // list-style: none;
     margin: auto 15px;
-    font-size: 20px;
+    font-size: 1rem;
     cursor: pointer;
-
     font-family: $Roboto;
+    @media screen and (max-width: 425px) {
+      
+        list-style: none;
+        span{
+          display: none;
+        }
+        ion-icon{
+          font-size: 18px;
+        }
+        
+
+    }
   }
-  // .left {
-  // }
   .right {
     display: flex;
+
+    //some CSS
+    @media screen and (max-width:$phone_wdth) {
+      display: flex;
+      li{ 
+        width: fit-content;
+        list-style: none;
+        span{
+          display: none;
+        }
+        }
+
+    }
+    @media screen and (min-width: 426px) and (max-width : 900px) {
+      background-color: #00ff4c;
+
+    }
   }
 }
 .TopContainer {
@@ -79,12 +106,33 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   background-image: linear-gradient(to right, #000000, #00000000);
+  @media screen and (max-width : $phone_wdth) {
+    flex-direction: column; 
+    margin-bottom: 30px;
+    
+    .text{
+      width: 100%;
+
+      h2{
+        color: #00ff4c;
+      }
+    }
+    
+  }
 
   .text {
     // height: 100%;
     width: 40%;
     // margin: 0px 10px 0px 60px;
     // background-color: $base-color;
+    @media screen and (max-width : $phone_wdth) {
+      width: 100%;
+      h2{
+        font-size: 32px !important;
+        margin: 5px auto;
+      }
+    
+    }
 
     h2 {
       color: #ffffff;
@@ -100,6 +148,21 @@ nav {
 
   .plansdiv {
     width: 50%;
+
+    @media screen and (max-width: $phone_wdth) {
+
+      width: 100vw;
+      margin: 10px ;
+
+      .plan{
+        width: 95% !important;
+
+        .planTxt {
+          width: 155px !important;
+        }
+      }
+      
+    }
 
     .plan {
       height: 90px;
@@ -181,13 +244,18 @@ nav {
   padding: 10px;
   background-color: rgb(3, 0, 10);
 
-  .planh3{
+  .planh3 {
     font-size: 36px;
     font-family: $Oxygen;
     margin: 10px 10px 10px 70px;
     color: #ffffff;
     border-bottom: solid 1px white;
     padding-left: 10px;
+    @media screen and (max-width: $phone_wdth) {
+      padding-left: 15px !important;
+      margin: 10px 10px 10px 10px;
+      
+    }
   }
   .box {
     width: 80%;
@@ -205,12 +273,24 @@ nav {
       transform: scale(1.01);
     }
 
+    @media screen and (max-width: $phone_wdth) {
+      width: 95%;
+      margin: 20px auto;
+      padding: 10px 20px;
+      flex-direction: column;
+      height: 350px;
+    }
+
     .boximg {
       width: 40%;
       height: 100%;
       background-image: url(../Images/cards.PNG);
       border-radius: 18px;
       background-size: cover;
+    
+    @media screen and (max-width: $phone_wdth) {
+    display: none;
+    }
     }
 
     .information {
@@ -218,7 +298,16 @@ nav {
 
       color: #ffffff;
       margin: 2px 10px;
-
+      @media screen and (max-width: $phone_wdth) {
+        padding: 10px 2px;
+        h2{
+          font-size: 28px !important;
+        }
+        li{
+          font-size: 1.2rem !important;
+         
+        }
+        }
       h2 {
         font-size: 38px;
         font-family: $Oxygen;
@@ -241,6 +330,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width:$phone_wdth) {
+
+      height: fit-content;
+      padding: 10px 5px;
+      flex-direction: column;
+      
+    }
     .plan {
       border-radius: 18px;
       border: solid 1px gray;
@@ -249,17 +345,23 @@ nav {
       background: rgb(255, 255, 255);
       background-image: url("../Images/plan\ back.JPG");
       background-size: 110% 102%;
-    background-position: -10px;
-    background-repeat: no-repeat;
-    transition: all 0.2s ease-in;
+      background-position: -10px;
+      background-repeat: no-repeat;
+      transition: all 0.2s ease-in;
       margin: 0px 15px;
-      &:hover{
+      &:hover {
         transform: scale(1.01);
-    background-position: -25px;
-    box-shadow: 5px 8px 15px 0px #00000054;
-
-
+        background-position: -25px;
+        box-shadow: 5px 8px 15px 0px #00000054;
       }
+
+      @media screen and (max-width:$phone_wdth) {
+
+        width: 280px !important;
+        margin: 10px auto;
+      }
+
+      
 
       .topimg {
         height: 150px;
@@ -270,6 +372,10 @@ nav {
           width: 298px;
           -o-object-fit: fill;
           object-fit: cover;
+          @media screen and (max-width:$phone_wdth) {
+
+          width: 278px !important;  
+          }
         }
       }
 
@@ -325,7 +431,7 @@ nav {
   }
 }
 
-.getmail{
+.getmail {
   width: 90%;
   height: 350px;
   // background:rgb(255, 0, 0);
@@ -334,38 +440,48 @@ nav {
   margin: 10px auto;
   border: 1px solid #fff;
   border-radius: 22px;
-  .left{
-    background : url(../Images/istockphoto-1320275763-612x612.jpg);
-    
+  .left {
+    background: url(../Images/istockphoto-1320275763-612x612.jpg);
+
     width: 40%;
     height: 100%;
     background-size: contain;
     background-position-x: 100px;
     background-repeat: no-repeat;
     // background:rgba(117, 210, 247, 0.432);
+  
+    @media screen and (max-width: $phone_wdth) {
+  display: none;      
+    }
+
   }
-  .right{
+  .right {
     width: 60%;
-    
-    // background:rgba(83, 206, 255, 0.432);
+
+    @media screen and (max-width: $phone_wdth) {
+      width:100% !important;
     h3{
+      font-size: 24px !important;
+      margin: 5px auto;
+    }    
+    
+    }
+    // background:rgba(83, 206, 255, 0.432);
+    h3 {
       font-size: 34px;
       color: #ffffff;
       font-family: $Oxygen;
-
     }
-    p{
+    p {
       font-size: 20px;
       font-family: $BalooDa2;
       color: #ffffff;
       margin-left: 5px;
-
     }
-
   }
 }
 
-.WatchAd{
+.WatchAd {
   height: fit-content;
   width: 90%;
   // background-color: $base-color;
@@ -374,27 +490,27 @@ nav {
   padding: 30px 0px;
   border-top: 1px solid #ffffff;
 
-  h3{
+  h3 {
     color: rgb(255, 255, 255);
     font-size: 32px;
     font-family: $Roboto;
   }
 
-  p{
+  p {
     color: rgb(221, 255, 230);
     margin: 5px auto;
     font-size: 18px;
     font-family: $Roboto;
   }
 
-  input{
+  input {
     margin: 15px 10px;
     height: 40px;
     width: 250px;
     border-radius: 12px;
   }
 
-  button{
+  button {
     height: 40px;
     width: 150px;
     background-color: $base-color;
@@ -406,27 +522,27 @@ nav {
   }
 }
 
-.Adex{
+.Adex {
   width: 80%;
   margin: 10px auto;
   text-align: center;
 }
 
-footer{
+footer {
   height: 60px;
   width: 100%;
   background-color: rgb(27, 0, 24);
   border-top: 1px solid rgb(94, 94, 94);
   padding-top: 20px;
 
-  p{
+  p {
     text-align: center;
     color: rgb(161, 161, 161);
     font-size: 14px;
     font-family: $Roboto;
-    a{
+    a {
       text-decoration: none;
       color: #ff0000;
-    } 
+    }
   }
 }

@@ -37,12 +37,12 @@ if(isset($_SESSION['username']))
     <div class="Home">
         <nav>
             <div class="left">
-                <li>Home</li>
+                <li><ion-icon name="home-outline"></ion-icon><span>Home</span></li>
             </div>
             <div class="right">
-                <li id="plansbtn" onclick="getscrollto(this.id)">Plans</li>
-                <li id="howitbtn" onclick="getscrollto(this.id)">How it Works</li>
-                <li onclick="window.open('./register.php')">Make Account</li>
+                <li id="plansbtn" onclick="getscrollto(this.id)"><ion-icon name="pricetags-outline"></ion-icon><span>Plans</span></li>
+                <li id="howitbtn" onclick="getscrollto(this.id)"><ion-icon name="cog-outline"></ion-icon><span>How it Works</span></li>
+                <li onclick="window.open('./register.php')"><ion-icon name="person-add-outline"></ion-icon><span>Make Account</span></li>
                 <li onclick="window.open('./login.php')">Log in</li>
                 <!-- <li onclick="window.open('https:\\www.google.com')">Log in</li> -->
             </div>
@@ -205,7 +205,7 @@ if(isset($_SESSION['username']))
         <a href="./register.php"> <button>GO!</button></a>
     </div>
 
-    <div class="Adex">
+    <!-- <div class="Adex">
         <script type="text/javascript">
             atOptions = {
                 'key': '0c1c6a51853a71ef6c55daafcc856694',
@@ -237,7 +237,7 @@ if(isset($_SESSION['username']))
             document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivecreativeformats.com/0c1c6a51853a71ef6c55daafcc856694/invoke.js"></scr' + 'ipt>');
         </script>
 
-    </div>
+    </div> -->
 
     <footer>
         <p>&copy;All right reserved <a href="./index.html">netflix.martycart.com</a></p>
