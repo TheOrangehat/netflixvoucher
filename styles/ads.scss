@@ -10,6 +10,7 @@ $Oxygen: "Oxygen", sans-serif;
 $BalooDa2: "Baloo Da 2", cursive;
 $backrground-color: #000000;
 $base-color: #ff0000;
+$phone_wdth : 425px;
 
 body {
     background-color: $backrground-color;
@@ -29,7 +30,7 @@ body {
   
 
 
-nav {
+  nav {
     width: 100%;
     height: 60px;
     padding: 0px 10px;
@@ -41,19 +42,44 @@ nav {
     justify-content: space-between;
   
     li {
-      // list-style: none;
       margin: auto 15px;
-      font-size: 20px;
-  
+      font-size: 1rem;
+      cursor: pointer;
       font-family: $Roboto;
+      @media screen and (max-width: $phone_wdth) {
+        
+          list-style: none;
+          span{
+            display: none;
+          }
+          ion-icon{
+            font-size: 18px;
+          }
+          
+  
+      }
     }
-    // .left {
-    // }
     .right {
       display: flex;
+  
+      //some CSS
+      @media screen and (max-width:$phone_wdth) {
+        display: flex;
+        li{ 
+          width: fit-content;
+          list-style: none;
+          span{
+            display: none;
+          }
+          }
+  
+      }
+      @media screen and (min-width: 426px) and (max-width : 900px) {
+        background-color: #00ff4c;
+  
+      }
     }
   }
-
 
   .topcont{
       width: 100%;

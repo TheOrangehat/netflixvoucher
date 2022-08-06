@@ -28,11 +28,11 @@ ini_set('display_errors', '0');
     <div class="Home">
         <nav>
             <div class="left">
-                <li>Home</li>
+                <li><ion-icon name="home-outline"></ion-icon><span>Home</span></li>
             </div>
             <div class="right">
-                <li  id="plansbtn" onclick="getscrollto(this.id)">Plans</li>
-                <li id="howitbtn" onclick="getscrollto(this.id)">How it Works</li>
+                <li id="plansbtn" onclick="getscrollto(this.id)"><ion-icon name="pricetags-outline"></ion-icon><span>Plans</span></li>
+                <!-- <li id="howitbtn" onclick="getscrollto(this.id)"><ion-icon name="cog-outline"></ion-icon><span>How it Works</span></li> -->
                 <li ><?php echo $_SESSION['username'] ?></li>
                 <li onclick="window.open('./logout.php')">Log out</li>
                 <!-- <li onclick="window.open('https:\\www.google.com')">Log in</li> -->

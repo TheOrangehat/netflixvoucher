@@ -46,14 +46,50 @@ nav {
 
 nav li {
   margin: auto 15px;
-  font-size: 20px;
+  font-size: 1rem;
+  cursor: pointer;
   font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 425px) {
+  nav li {
+    list-style: none;
+  }
+  nav li span {
+    display: none;
+  }
+  nav li ion-icon {
+    font-size: 18px;
+  }
 }
 
 nav .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 425px) {
+  nav .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .right li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    list-style: none;
+  }
+  nav .right li span {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 900px) {
+  nav .right {
+    background-color: #00ff4c;
+  }
 }
 
 .topcont {

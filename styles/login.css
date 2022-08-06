@@ -2,6 +2,8 @@ body {
   background-image: url(../Images/Netflix-.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .loginBox {
@@ -10,10 +12,21 @@ body {
   margin: 30px auto;
   height: 90vh;
   width: 30%;
+  min-width: 300px;
   background: linear-gradient(81deg, black, #7f00009c);
   padding: 10px;
   border-radius: 22px;
   border: 1px solid #1d1d1d;
+}
+
+@media screen and (max-width: 425px) {
+  .loginBox {
+    min-width: none;
+    width: 90vw !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 .loginBox .circelBack {
